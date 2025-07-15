@@ -252,6 +252,35 @@ streamlit run app.py
 
 ---
 
+## ▶️ Run the RAG via Docker
+
+Start Docker Service:
+
+```bash
+docker-compose up -d
+```
+
+Check service status:
+
+```bash
+docker-compose ps
+```
+
+Logs
+
+```bash
+# Server logs
+docker-compose logs server
+
+# Client logs
+docker-compose logs client
+
+# All logs
+docker-compose logs -f
+```
+
+---
+
 ## 📖 Usage Guide
 
 ### 1. Configure Model
