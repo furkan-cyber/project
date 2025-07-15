@@ -222,7 +222,7 @@ GROQ_API_KEY=your-groq-key
 
 ---
 
-## ▶️ Run the Bot
+## ▶️ Run the RAG
 
 Start FastAPI backend:
 
