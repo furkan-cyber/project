@@ -178,7 +178,17 @@ server/
 - Docker and Docker Compose
 - Groq API key (get it from [Groq Console](https://console.groq.com))
 
-## 📦 Installation
+
+## 📦 Installation via Docker
+
+```bash
+git clone https://github.com/furkan-cyber/project.git
+cd project
+```
+
+---
+
+## 📦 Installation Local
 
 ```bash
 git clone https://github.com/furkan-cyber/project.git
@@ -222,7 +232,7 @@ GROQ_API_KEY=your-groq-key
 
 ---
 
-## ▶️ Run the RAG
+## ▶️ Run the RAG Local
 
 Start FastAPI backend:
 
