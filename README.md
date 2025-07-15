@@ -1,4 +1,4 @@
-# 👽 RAG PDFBot
+# RAG 
 
 A sophisticated Retrieval-Augmented Generation (RAG) system that enables users to chat with multiple PDF documents using Large Language Models (LLMs). Built with FastAPI backend, Streamlit frontend, and Docker containerization.
 
