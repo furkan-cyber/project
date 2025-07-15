@@ -178,45 +178,69 @@ server/
 - Docker and Docker Compose
 - Groq API key (get it from [Groq Console](https://console.groq.com))
 
-### Installation
+## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone [<repository-url>](https://github.com/furkan-cyber/project.git)
-   cd rag-pdfbot
-   ```
-
-2. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env and add your GROQ_API_KEY
-   ```
-
-3. **Start the application**
-   ```bash
-   docker-compose up -d
-   ```
-
-4. **Access the application**
-   - Frontend: http://localhost:8501
-   - Backend API: http://localhost:8000
-   - API Documentation: http://localhost:8000/docs
-
-### Manual Setup (Development)
-
-#### Server Setup
 ```bash
-cd server
-pip install -r requirements.txt
-python main.py
+git clone https://github.com/furkan-cyber/project.git
+cd project
 ```
 
-#### Client Setup
+Setup Virtual Environment:
+```bash
+python -m venv venv
+.\venv\Scripts\activate.bat
+```
+
+Install frontend:
+
 ```bash
 cd client
 pip install -r requirements.txt
+pip install -r requirements-test.txt
+```
+
+Install backend:
+
+```bash
+cd ../server
+pip install -r requirements.txt
+pip install -r requirements-test.txt
+```
+
+---
+
+## 🔐 API Keys Required
+
+- **Groq API key** from [console.groq.com](https://console.groq.com/)
+  
+
+Create a `.env` file:
+
+```env
+GROQ_API_KEY=your-groq-key
+```
+
+---
+
+## ▶️ Run the Bot
+
+Start FastAPI backend:
+
+```bash
+# Terminal 1
+cd server
+uvicorn main:app --reload
+```
+
+Start Streamlit frontend:
+
+```bash
+# Terminal 2
+cd client
 streamlit run app.py
 ```
+
+---
 
 ## 📖 Usage Guide
 
@@ -326,14 +350,14 @@ All API responses follow this structure:
 ```bash
 cd server
 pip install -r requirements-test.txt
-pytest tests/ -v
+python -m pytest tests/
 ```
 
 #### Client Tests
 ```bash
 cd client
 pip install -r requirements-test.txt
-pytest tests/ -v
+python -m pytest tests/
 ```
 
 ### Test Coverage
@@ -439,31 +463,6 @@ docker-compose logs client
 docker-compose logs -f
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Run the test suite
-6. Submit a pull request
-
-### Development Setup
-
-```bash
-# Install development dependencies
-pip install -r requirements-test.txt
-
-# Run tests
-pytest tests/ -v
-
-# Run with coverage
-pytest tests/ --cov=. --cov-report=html
-```
-
-## 📄 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
@@ -482,5 +481,3 @@ For support, questions, or feature requests:
 - Review the API documentation at `/docs`
 
 ---
-
-Built with ❤️ for the AI community
