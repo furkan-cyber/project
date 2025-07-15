@@ -182,7 +182,7 @@ server/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/furkan-cyber/project.git)
    cd rag-pdfbot
    ```
 
