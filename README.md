@@ -461,8 +461,8 @@ MODEL_OPTIONS = {
 ### Vector Store Settings
 
 - **Embedding Model**: sentence-transformers/all-MiniLM-L12-v2
-- **Chunk Size**: 500 tokens
-- **Chunk Overlap**: 50 tokens
+- **Chunk Size**: 1200 tokens
+- **Chunk Overlap**: 200 tokens
 - **Search Results**: Top 3 similar chunks
 - **Storage**: Local filesystem with Docker volumes
 
