@@ -7,7 +7,7 @@ from core.vector_database import initialize_empty_vectorstores
 from utils.logger import logger
 
 
-app = FastAPI(title="RAG PDFBot", description="Chat with multiple PDFs :books:")
+app = FastAPI(title="RAG", description="Chat with multiple PDFs :books:")
 app.include_router(router)
 
 @app.on_event("startup")
