@@ -28,3 +28,49 @@ services:
 
 volumes:
   vectorstore_data:
+
+
+
+
+#### DOCKER
+
+#version: '3.8'
+
+#services:
+  #server:
+    #build:
+      #context: ./server
+      #dockerfile: Dockerfile
+   # ports:
+      #- "8000:8000"
+    #volumes:
+      #- ./server:/app
+      #- vectorstore_data:/app/data
+    #environment:
+     # - GROQ_API_KEY=${GROQ_API_KEY}
+   # restart: unless-stopped
+    #networks:
+    #  - rag-network
+
+  #client:
+   # build:
+      #context: ./client
+      #dockerfile: Dockerfile
+    #ports:
+      #- "8501:8501"
+    #volumes:
+      #- ./client:/app
+    #depends_on:
+      #- server
+    #restart: unless-stopped
+    #networks:
+      #- rag-network
+    #environment:
+      #- API_URL=http://server:8000  # Override the config
+
+#networks:
+  #rag-network:
+    #driver: bridge
+
+#volumes:
+  #vectorstore_data:
